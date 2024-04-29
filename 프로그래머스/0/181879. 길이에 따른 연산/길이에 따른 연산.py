@@ -1,11 +1,2 @@
 def solution(num_list):
-    result = 0
-    if len(num_list) > 10:
-        for i in num_list:
-            result += i
-    else:
-        result = 1
-        for i in num_list:
-            result = result * i
-        
-    return result
+    return sum(num_list) if len(num_list) > 10 else eval('*'.join([str(n) for n in num_list]))
